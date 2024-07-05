@@ -51,11 +51,7 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
 
     try {
         //Token generation jwt
-        const token = sign(
-            { sub: (await newUser)._id },
-            config.jwtSecret as string,
-            { expiresIn: '7d' },
-        );
+        const token = sign({ sub: (await newUser)._id }, config.jwtSecret as string, { expiresIn: '7d' },);
 
         //response
         res.status(201).json({ accssesToken: token });
