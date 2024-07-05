@@ -7,7 +7,7 @@ const bookSchema = new mongoose.Schema<Book>({
         type: String,
         required: true,
     },
-    auhtor: {
+    author: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
     },

@@ -5,7 +5,7 @@ export interface Book {
 
     title: string;
 
-    auhtor: User;
+    author: User;
 
     genre: string;
 
